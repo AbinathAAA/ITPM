@@ -5,8 +5,7 @@ package com.mycompany.mavenproject1;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
+//connectors
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -271,11 +270,7 @@ public class Managelocation1 extends javax.swing.JFrame {
                 
                 int capacity=Integer.parseInt(Capasity.getText());
                  sql.setInt(4,capacity); 
-                  
-                  
-                   
-                  
-
+               
                    int Success=sql.executeUpdate();
                    if(Success>0)
                    {
@@ -286,8 +281,7 @@ public class Managelocation1 extends javax.swing.JFrame {
                        new Managelocation1().setVisible(true);
                        
                    }
-                  
-               
+                   
                 }catch(NumberFormatException e){
                    cap.setText("* capacity must be integer");
                    Capasity.setText("");
@@ -445,8 +439,6 @@ public class Managelocation1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
              new Managelocation1().setVisible(true);
-
-//            new Addkocation().setVisible(true);
 
             }
         });
